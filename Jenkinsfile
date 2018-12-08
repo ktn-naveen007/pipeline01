@@ -16,5 +16,6 @@ mvn test
 stage('packaging'){
 bat '''
 mvn package
+'''
 }
 }
