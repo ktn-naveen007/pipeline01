@@ -1,24 +1,20 @@
-node('master')
-{
-  def envVars = [:]
-stage('initialize'){
+node('master'){
 
+stage('initialize'){
 checkout scm
 }
 stage('compile'){
-
-bat '''
+ bat '''
 mvn compile
 '''
- 
-
 }
 stage('unittest'){
-
-   bat '''
-       mvn test
-   '''
-   
-
+bat '''
+mvn test
+'''
+}
+stage('packaging'){
+bat '''
+mvn package
 }
 }
