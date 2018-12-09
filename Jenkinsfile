@@ -21,6 +21,7 @@ artifactName = bat(script:'@dir target\\*.jar /b',returnStdout: true)
 }
 stage("uploading ${artifactName}"){
     bat """
+	rmdir /s /q e:\\naveen_jenkins
         mkdir e:\\naveen_jenkins
         copy "target\\${artifactName}" "e:\\naveen_jenkins" 
     """
