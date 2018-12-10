@@ -4,26 +4,26 @@ stage('initialize'){
 checkout scm
 }
 stage('compile'){
- bat '''
+ sh '''
 mvn compile
 '''
 }
 stage('unittest'){
-bat '''
+sh '''
 mvn test
 '''
 }
 stage('packaging'){
-bat '''
+sh '''
 mvn package
 '''
-artifactName = bat(script:'@dir target\\*.jar /b',returnStdout: true).trim()
+artifactName = sh(script:'@dir target\\*.jar /b',returnStdout: true).trim()
 }
 stage("uploading ${artifactName}"){
-    bat """
-	    rmdir /s /q e:\\naveen_jenkins
-        mkdir e:\\naveen_jenkins
-        copy target\\${artifactName} e:\\naveen_jenkins 
+    sh """
+	    rm -f ~/Downloads/Artifacts
+        mkdir ~/Downloads/Artifacts
+        cp target/${artifactName} ~/Downloads/Artifacts 
     """
 }
 }
