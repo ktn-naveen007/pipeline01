@@ -1,4 +1,4 @@
-node('master'){
+node('Node_Ub'){
 def artifactName = null
 stage('initialize'){
 checkout scm
