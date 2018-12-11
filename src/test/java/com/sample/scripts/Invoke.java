@@ -12,7 +12,7 @@ public class Invoke {
 		/*System.setProperty("webdriver.chrome.driver", "E:\\Jenkin_Dec06\\sample\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();*/
 		System.out.println(System.getProperty("user.dir"));
-		System.setProperty("webdriver.gecko.driver",  System.getProperty("user.dir")+"\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver",  System.getProperty("user.dir")+"/Drivers/geckodriver.exe");
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", true);
 		WebDriver driver = new FirefoxDriver(capabilities);
