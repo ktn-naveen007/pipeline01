@@ -14,9 +14,10 @@ export DISPLAY=:0
 chmod +x ./Drivers/geckodriver
 mvn test
 '''
+step([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
 }
-step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
-stage('packaging'){
+
+/* stage('packaging'){
 sh '''
 mvn package -DskipTests=true
 '''
@@ -28,5 +29,5 @@ stage("uploading ${artifactName}"){
         mkdir ~/Downloads/Artifacts
         cp target/${artifactName} ~/Downloads/Artifacts 
     """
-}
+} */
 }
