@@ -15,10 +15,10 @@ chmod +x ./Drivers/geckodriver
 mvn test
 '''
 }
-
+step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
 stage('packaging'){
 sh '''
-mvn package
+mvn package -DskipTests=true
 '''
 artifactName = sh(script:'@dir target\\*.jar /b',returnStdout: true).trim()
 }
