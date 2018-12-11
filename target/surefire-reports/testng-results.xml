@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="14267" started-at="2018-12-11T14:55:57Z" finished-at="2018-12-11T14:56:12Z">
+  <suite name="Suite1" duration-ms="10765" started-at="2018-12-11T15:19:52Z" finished-at="2018-12-11T15:20:03Z">
     <groups>
     </groups>
-    <test name="Devops" duration-ms="14267" started-at="2018-12-11T14:55:57Z" finished-at="2018-12-11T14:56:12Z">
+    <test name="Devops" duration-ms="10765" started-at="2018-12-11T15:19:52Z" finished-at="2018-12-11T15:20:03Z">
       <class name="com.sample.scripts.Invoke">
-        <test-method status="PASS" signature="invokeApp()[pri:0, instance:com.sample.scripts.Invoke@5d624da6]" name="invokeApp" duration-ms="14233" started-at="2018-12-11T14:55:57Z" finished-at="2018-12-11T14:56:12Z">
+        <test-method status="PASS" signature="invokeApp()[pri:0, instance:com.sample.scripts.Invoke@5d624da6]" name="invokeApp" duration-ms="10732" started-at="2018-12-11T15:19:52Z" finished-at="2018-12-11T15:20:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
