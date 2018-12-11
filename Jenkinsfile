@@ -13,6 +13,11 @@ sh '''
 mvn test
 '''
 }
+stage('automation'){
+sh'''
+mvn clean test -Dsuite=DevOps
+'''
+}
 stage('packaging'){
 sh '''
 mvn package

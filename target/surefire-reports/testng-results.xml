@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="7409" started-at="2018-12-11T13:57:28Z" finished-at="2018-12-11T13:57:35Z">
+    <groups>
+    </groups>
+    <test name="Devops" duration-ms="7409" started-at="2018-12-11T13:57:28Z" finished-at="2018-12-11T13:57:35Z">
+      <class name="com.sample.scripts.Invoke">
+        <test-method status="PASS" signature="invokeApp()[pri:0, instance:com.sample.scripts.Invoke@5315b42e]" name="invokeApp" duration-ms="7382" started-at="2018-12-11T13:57:28Z" finished-at="2018-12-11T13:57:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeApp -->
+      </class> <!-- com.sample.scripts.Invoke -->
+    </test> <!-- Devops -->
+  </suite> <!-- Suite1 -->
+</testng-results>
