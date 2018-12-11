@@ -15,11 +15,7 @@ chmod +x ./Drivers/geckodriver
 mvn test
 '''
 }
-stage('automation'){
-sh'''
-mvn test -Dsuite=DevOps
-'''
-}
+
 stage('packaging'){
 sh '''
 mvn package
