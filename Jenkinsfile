@@ -1,4 +1,4 @@
-node('master'){
+node('Node_Ub'){
 def artifactName = null
 stage('initialize'){
 checkout scm
@@ -15,7 +15,7 @@ mvn test
 }
 stage('automation'){
 sh'''
-mvn clean test -Dsuite=DevOps
+mvn test -Dsuite=DevOps
 '''
 }
 stage('packaging'){
