@@ -10,6 +10,7 @@ mvn compile
 }
 stage('unittest'){
 sh '''
+export DISPLAY=:0
 chmod +x ./Drivers/geckodriver
 mvn test
 '''
