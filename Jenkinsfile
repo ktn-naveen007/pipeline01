@@ -27,7 +27,7 @@ mvn package -DskipTests
 
 }
 stage('uploading'){
-    artifactName=sample-0.0.1-SNAPSHOT
+    artifactName='sample-0.0.1-SNAPSHOT'
     sh """
 	    rm -f ~/Downloads/Artifacts
         mkdir ~/Downloads/Artifacts
