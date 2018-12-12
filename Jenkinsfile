@@ -21,7 +21,7 @@ stage('packaging'){
 sh '''
 mvn package -DskipTests 
 '''
- artifactName = sh(script:'''#!bash/sh
+ artifactName = sh(script:'''#!/usr/bin/env bash
                             ls target/\\*.jar
                         ''',returnStdout: true).trim() 
 
