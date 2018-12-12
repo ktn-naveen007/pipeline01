@@ -17,9 +17,10 @@ mvn test
 step([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
 }
 
-/* stage('packaging'){
+stage('packaging'){
 sh '''
-mvn package -DskipTests=true
+mvn install -DskipTests
+mvn package 
 '''
 artifactName = sh(script:'@dir target\\*.jar /b',returnStdout: true).trim()
 }
@@ -29,5 +30,5 @@ stage("uploading ${artifactName}"){
         mkdir ~/Downloads/Artifacts
         cp target/${artifactName} ~/Downloads/Artifacts 
     """
-} */
+}
 }
