@@ -28,10 +28,8 @@ mvn package -DskipTests
 }
 stage('uploading'){
     
-    sh """
-	   /*  rm -f ~/Downloads/Artifacts */
-        mkdir ~/Downloads/Artifacts
-        cp target/${artifactName} ~/Downloads/Artifacts 
+    sh """#!/usr/bin/env bash
+	          cp target/${artifactName} ~/Downloads/Artifacts 
     """
 } 
 }
