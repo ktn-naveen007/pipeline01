@@ -29,7 +29,7 @@ mvn package -DskipTests
 stage('uploading'){
     
     sh """#!/usr/bin/env bash
-	          cp target/${artifactName} ~/Downloads/Artifacts 
+	          cp ${artifactName} ~/Downloads/Artifacts 
     """
 } 
 }
