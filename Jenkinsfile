@@ -19,8 +19,7 @@ step([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/te
 
 stage('packaging'){
 sh '''
-mvn install -DskipTests 
-mvn package
+mvn package -DskipTests 
 '''
 /* mvn package -Dmaven.test.skip=true  */
 
