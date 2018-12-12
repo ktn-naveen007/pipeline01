@@ -23,7 +23,8 @@ mvn package -DskipTests
 '''
 /* mvn package -Dmaven.test.skip=true  */
 
-artifactName = sh(script:'dir /target/\\*.jar',returnStdout: true).trim()
+/* artifactName = sh(script:'dir /target/\\*.jar',returnStdout: true).trim() */
+artifactName=sample-0.0.1-SNAPSHOT
 }
 stage("uploading ${artifactName}"){
     sh """
