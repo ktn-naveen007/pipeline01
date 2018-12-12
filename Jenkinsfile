@@ -22,7 +22,7 @@ sh '''
 mvn package -DskipTests 
 '''
  artifactName = sh(script:'''#!/usr/bin/env bash
-                            ls target/\\*.jar
+                            ls target/*.jar
                         ''',returnStdout: true).trim() 
 
 }
