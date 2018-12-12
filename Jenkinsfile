@@ -21,7 +21,11 @@ stage('packaging'){
 sh '''
 mvn package -DskipTests 
 '''
- artifactName = sh(script:'ls target/\\*.jar',returnStdout: true).trim() 
+ artifactName = sh(script:'''
+                            ls
+                            ls target/
+                            ls target/\\*.jar
+                        ''',returnStdout: true).trim() 
 
 }
 stage('uploading'){
